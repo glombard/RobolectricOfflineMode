@@ -20,6 +20,13 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.1.1'
+    testCompile 'org.robolectric:robolectric:3.0-rc2'
+}
+
+afterEvaluate {
+    project.tasks.withType(Test) {
+        systemProperties.put('robolectric.offline', 'true')
+        systemProperties.put('robolectric.dependency.dir', '/tmp/robolectric-files')
+    }
 }
