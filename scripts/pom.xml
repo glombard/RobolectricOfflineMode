@@ -1,0 +1,47 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+http://maven.apache.org/maven-v4_0_0.xsd">
+
+<!--
+Robolectric version: 3.0-rc2
+SDK version: 5.0.0_r2-robolectric-1
+
+Save this output to pom.xml and download jars with:
+
+mvn dependency:copy-dependencies
+-DremoteRepositories=http://repo1.maven.org/maven2/
+-DoutputDirectory=/tmp/robolectric-files
+-->
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.robolectric</groupId>
+  <artifactId>robolectric-files</artifactId>
+  <version>3.0-rc2</version>
+  <packaging>pom</packaging>
+  <description>Robolectric Test Runner files.</description>
+  <url>http://robolectric.org/</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.robolectric </groupId>
+      <artifactId>android-all</artifactId>
+      <version>5.0.0_r2-robolectric-1</version>
+    </dependency><dependency>
+      <groupId>org.robolectric </groupId>
+      <artifactId>shadows-core</artifactId>
+      <version>3.0-rc2</version>
+    </dependency><dependency>
+      <groupId>org.json </groupId>
+      <artifactId>json</artifactId>
+      <version>20080701</version>
+    </dependency><dependency>
+      <groupId>org.ccil.cowan.tagsoup </groupId>
+      <artifactId>tagsoup</artifactId>
+      <version>1.2</version>
+    </dependency>
+  </dependencies>
+</project>
