@@ -46,8 +46,11 @@ for tup in matches:
     ver = robolectric_version
   else:
     ver = tup[2].replace('"', '')
+  classifier = ''
+  if tup[1] == 'shadows-core':
+    classifier = '21' # hack - force to download shadows-core for API 21.
   dependencies.append(
-    {'groupId': tup[0], 'artifactId': tup[1], 'version': ver})
+    {'groupId': tup[0], 'artifactId': tup[1], 'version': ver, 'classifier': classifier})
 
 pom_template_text = """
 <?xml version="1.0" encoding="UTF-8"?>
@@ -82,6 +85,7 @@ mvn dependency:copy-dependencies
       <groupId>{{ d.groupId }} </groupId>
       <artifactId>{{ d.artifactId }}</artifactId>
       <version>{{ d.version }}</version>
+      <classifier>{{ d.classifier }}</classifier>
     </dependency>
     {%- endfor %}
   </dependencies>

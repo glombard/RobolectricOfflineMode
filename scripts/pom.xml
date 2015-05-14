@@ -30,18 +30,22 @@ mvn dependency:copy-dependencies
       <groupId>org.robolectric </groupId>
       <artifactId>android-all</artifactId>
       <version>5.0.0_r2-robolectric-1</version>
+      <classifier></classifier>
     </dependency><dependency>
       <groupId>org.robolectric </groupId>
       <artifactId>shadows-core</artifactId>
       <version>3.0-rc2</version>
+      <classifier>21</classifier>
     </dependency><dependency>
       <groupId>org.json </groupId>
       <artifactId>json</artifactId>
       <version>20080701</version>
+      <classifier></classifier>
     </dependency><dependency>
       <groupId>org.ccil.cowan.tagsoup </groupId>
       <artifactId>tagsoup</artifactId>
       <version>1.2</version>
+      <classifier></classifier>
     </dependency>
   </dependencies>
 </project>
